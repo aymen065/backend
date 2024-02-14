@@ -1,9 +1,6 @@
 package com.bezkoder.springbootjpah2.Models;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
@@ -20,8 +17,8 @@ import java.util.Set;
         })
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
-@ToString
+@Getter
+@Setter
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

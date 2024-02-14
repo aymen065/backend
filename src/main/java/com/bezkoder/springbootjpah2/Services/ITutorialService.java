@@ -1,34 +1,26 @@
 package com.bezkoder.springbootjpah2.Services;
 
 import com.bezkoder.springbootjpah2.Dto.TutorialDTO;
-import com.bezkoder.springbootjpah2.Models.Tutorial;
-import com.bezkoder.springbootjpah2.payload.response.TutorialsResponse;
-import org.springframework.data.domain.Page;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+import org.springframework.data.domain.Page;
+
 
 public interface ITutorialService {
 
-    public Page<TutorialDTO> getAllTutorials(String title, Integer page, Integer size)throws Exception;
+     Page<TutorialDTO> getAllTutorials(String title, Integer page, Integer size)throws Exception;
 
 
-    public TutorialDTO getTutorialById(Long id);
+     TutorialDTO getTutorialById(Long id);
 
-    public TutorialDTO createTutorial(TutorialDTO tutorial) throws Exception;
-
-
-    public TutorialDTO updateTutorial(TutorialDTO tutorialDTO);
-
-    public void deleteTutorialById(Long id) throws Exception;
+     TutorialDTO createTutorial(TutorialDTO tutorial) throws Exception;
 
 
-    public void deleteAllTutorials() throws Exception;
+     TutorialDTO updateTutorial(TutorialDTO tutorialDTO);
 
-    public Page<TutorialDTO> findPublishedByPage(Integer page , Integer size) throws  Exception;
+     void deleteTutorialById(Long id) throws Exception;
+
+
+     void deleteAllTutorials() throws Exception;
+
+     Page<TutorialDTO> findPublishedByPage(Integer page , Integer size) throws  Exception;
 }

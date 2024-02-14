@@ -1,9 +1,6 @@
 package com.bezkoder.springbootjpah2.Models;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.*;
 
@@ -11,8 +8,8 @@ import javax.persistence.*;
 @Table(name = "roles")
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
-@ToString
+@Getter
+@Setter
 public class Role {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
